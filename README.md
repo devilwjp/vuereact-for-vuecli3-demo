@@ -18,6 +18,7 @@ module.exports = {
   presets: [
     '@vue/cli-plugin-babel/preset'
   ],
+    // 使用overrides是为了分开配置jsx的解析规则，在react_app里使用react的规则解析，其他使用vue的规则
     overrides: [
         {
             // 这里如果不用函数，会出现报错的情况，还没找到原因
@@ -49,4 +50,5 @@ module.exports = {
         }
     ]
 }
+
 ````  
