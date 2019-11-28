@@ -7,6 +7,7 @@
 ````  
 npm i react react-dom babel-plugin-transform-react-jsx vuereact-combined -S
 ````  
++ 在src目录里创建一个react_app的目录用来存放react的jsx文件  
 + 在babel.config.js中进行配置
 ````  
 const path = require('path')
