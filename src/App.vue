@@ -4,10 +4,18 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <ReactCom></ReactCom>
     <router-view/>
   </div>
 </template>
-
+<script>
+import { useReactInVue } from 'vuereact-combined'
+let ReactCom = useReactInVue(require('./react_app/test1.jsx'))
+export default {
+    name:'aaa',
+    components: { ReactCom }
+}
+</script>
 <style lang="scss">
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
