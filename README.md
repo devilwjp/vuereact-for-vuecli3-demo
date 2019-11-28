@@ -1,29 +1,52 @@
-# vuereact-for-vuecli3-demo
+# 一个纯净的通过vue-cli3创建的项目集成了react  
+被用于VueReact(vuereact-combined)的demo用例  
 
-## Project setup
-```
-npm install
-```
+## demo项目的创造步骤日志  
++ 通过vue create创建一个项目  
++ 安装相关依赖  
+````  
+npm i react react-dom babel-plugin-transform-react-jsx vuereact-combined -S
+````  
++ 在babel.config.js中进行配置
+````  
+const path = require('path')
+function resolve (dir) {
+    return path.join(__dirname,  dir)
+}
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+module.exports = {
+  presets: [
+    '@vue/cli-plugin-babel/preset'
+  ],
+    overrides: [
+        {
+            // 这里如果不用函数，会出现报错的情况，还没找到原因
+            test:function(filename) {
+                if (filename === undefined) return
+                if (filename.indexOf(resolve('src')) === 0) return filename
+            },
+            exclude: [/react_app[\/\\]+/],
+            presets: [
+                ['@vue/cli-plugin-babel/preset', {
+                    jsx: true
+                }]
+            ]
+        },
+        {
+            // 这里如果不用函数，会出现报错的情况，还没找到原因
+            test:function(filename) {
+                if (filename === undefined) return
+                if (filename.indexOf(resolve('src/react_app')) === 0) return filename
+            },
+            plugins: [
+                'transform-react-jsx'
+            ],
+            presets: [
+                ['@vue/cli-plugin-babel/preset', {
+                    jsx: false
+                }]
+            ]
+        }
+    ]
+}
+````  
