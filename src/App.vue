@@ -4,16 +4,18 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </div>
+    <jsxTest></jsxTest>
     <ReactCom></ReactCom>
     <router-view/>
   </div>
 </template>
 <script>
 import { useReactInVue } from 'vuereact-combined'
+import jsxTest from './views/vueJsx'
 let ReactCom = useReactInVue(require('./react_app/test1.jsx'))
 export default {
     name:'aaa',
-    components: { ReactCom }
+    components: { ReactCom, jsxTest }
 }
 </script>
 <style lang="scss">
