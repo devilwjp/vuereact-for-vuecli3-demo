@@ -11,7 +11,7 @@
 </template>
 <script>
 import { useReactInVue } from 'vuereact-combined'
-import jsxTest from './views/vueJsx'
+import jsxTest from './views/vueJsx.jsx'
 let ReactCom = useReactInVue(require('./react_app/test1.jsx'))
 export default {
     name:'aaa',

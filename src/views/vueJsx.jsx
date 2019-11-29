@@ -1,4 +1,3 @@
-<script>
 export default {
     name: 'jsx',
     render: function (h) {
@@ -9,4 +8,3 @@ export default {
         )
     }
 }
-</script>
