@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import { lazyReactInVue } from 'vuereact-combined'
 
 Vue.use(VueRouter)
 
@@ -17,7 +18,27 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+  },
+  {
+      path: '/reactInVue1',
+      name: 'reactInVue1',
+      component: () => import( '../views/demo/reactInVue1')
+  },
+  {
+      path: '/reactInVue2',
+      name: 'reactInVue2',
+      component: () => import( '../views/demo/reactInVue2')
+  },
+    {
+        path: '/reactAntdInVue',
+        name: 'reactAntdInVue',
+        component: () => import( '../views/demo/reactAntdInVue')
+    },
+    {
+        path: '/lazyReactInVue',
+        name: 'lazyReactInVue',
+        component: lazyReactInVue(() => import( '../react_app/cc.jsx'))
+    }
 ]
 
 const router = new VueRouter({

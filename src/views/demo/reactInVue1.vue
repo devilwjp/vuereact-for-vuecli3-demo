@@ -1,0 +1,35 @@
+<template>
+    <div class="vue-com">
+        我是Vue组件
+        <ReactCom class="react-com" :prop1="prop1Value" prop2="222">我是普通插槽</ReactCom>
+    </div>
+</template>
+
+<script>
+    import { useReactInVue } from 'vuereact-combined'
+    const ReactCom = useReactInVue(require('../../react_app/cc'))
+    export default {
+        name: "reactInVue1",
+        data () {
+            return {
+                prop1Value: 111
+            }
+        },
+        components: {
+            ReactCom
+        }
+    }
+</script>
+
+<style scoped>
+    .vue-com{
+        background: #c0d6cc;
+        padding: 20px;
+        margin: 20px;
+    }
+    .react-com{
+        background: #b1c1ff;
+        padding: 20px;
+        margin: 20px;
+    }
+</style>

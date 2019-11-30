@@ -2,20 +2,17 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link to="/reactInVue1">vue组件引用react组件</router-link> |
+      <router-link to="/reactInVue2">vue组件引用react组件(advanced)</router-link> |
+      <router-link to="/reactAntdInVue">使用react antd进行复杂嵌套</router-link> |
+      <router-link to="/lazyReactInVue">路由懒加载react组件</router-link>
     </div>
-    <jsxTest></jsxTest>
-    <ReactCom></ReactCom>
     <router-view/>
   </div>
 </template>
 <script>
-import { useReactInVue } from 'vuereact-combined'
-import jsxTest from './views/vueJsx.jsx'
-let ReactCom = useReactInVue(require('./react_app/test1.jsx'))
 export default {
-    name:'aaa',
-    components: { ReactCom, jsxTest }
+    name:'aaa'
 }
 </script>
 <style lang="scss">
