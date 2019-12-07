@@ -22,10 +22,10 @@
 <script>
     import { DatePicker, Card } from "antd"
     import "antd/dist/antd.css"
-    import { useReactInVue } from 'vuereact-combined'
+    import { applyReactInVue } from 'vuereact-combined'
     import reactInVue1 from './reactInVue1'
-    const DatePickerInVue = useReactInVue(DatePicker)
-    const CardInVue = useReactInVue(Card)
+    const DatePickerInVue = applyReactInVue(DatePicker)
+    const CardInVue = applyReactInVue(Card)
     export default {
         data () {
             return {

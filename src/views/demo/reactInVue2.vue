@@ -17,8 +17,8 @@
 </template>
 
 <script>
-    import { useReactInVue } from 'vuereact-combined'
-    const ReactCom = useReactInVue(require('../../react_app/cc'))
+    import { applyReactInVue } from 'vuereact-combined'
+    const ReactCom = applyReactInVue(require('../../react_app/cc'))
     export default {
         name: 'demo2',
         data () {
