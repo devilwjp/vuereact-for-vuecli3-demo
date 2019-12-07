@@ -14,7 +14,7 @@ class cc extends React.Component {
     render () {
         return (
             <div>
-                <div onClick={(e)=>{console.log(e)}}>我是React组件</div>
+                <div>我是React组件</div>
                 <div>属性1：{this.props.prop1}</div>
                 <div>属性2：{this.props.prop2}</div>
                 {this.props.slotA}

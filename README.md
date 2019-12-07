@@ -1,5 +1,6 @@
 # 一个纯净的通过vue-cli3创建的项目集成了react  
 被用于VueReact(vuereact-combined)的demo用例  
+在线demo https://devilwjp.github.io/vuereact-for-vuecli3-demo/dist/index.html
 
 ## demo项目的创造步骤日志  
 + 通过vue create创建一个项目  

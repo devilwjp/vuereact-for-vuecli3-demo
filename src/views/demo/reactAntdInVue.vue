@@ -1,8 +1,11 @@
 <template>
     <div class="vue-com">
         我是Vue组件
-        <DatePickerInVue class="react-com"></DatePickerInVue>
-        <CardInVue class="react-com" title="Default size card">
+        <div class="react-com">
+            <h3>react antd DatePicker</h3><br>
+            <DatePickerInVue></DatePickerInVue>
+        </div>
+        <CardInVue class="react-com" title="react antd Card">
             <!--react antd的extra属性是传递html片段的，在vue中就使用具名插槽-->
             <template v-slot:extra>
                 <a href="#">More</a>
