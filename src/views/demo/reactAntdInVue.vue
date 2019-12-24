@@ -8,7 +8,7 @@
         <CardInVue class="react-com" title="react antd Card">
             <!--react antd的extra属性是传递html片段的，在vue中就使用具名插槽-->
             <template v-slot:extra>
-                <a href="#">More</a>
+                <a href="#">MOREMORE</a>
             </template>
             <p>Card content</p>
             <p>Card content</p>

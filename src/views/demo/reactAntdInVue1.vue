@@ -1,25 +1,28 @@
 <template>
-    <div class="vue-com">
-        我是Vue组件
-        <ReactCom ref="reactCom" class="react-com" :prop1="prop1Value" prop2="222">我是普通插槽</ReactCom>
-    </div>
+    <CardInVue class="react-com" title="react antd Card">
+        <template v-slot:extra>
+            <a href="#">more</a>
+        </template>
+    </CardInVue>
 </template>
 
 <script>
+    import { DatePicker, Card } from "antd"
+    import "antd/dist/antd.css"
     import { applyReactInVue } from 'vuereact-combined'
-    const ReactCom = applyReactInVue(require('../../react_app/cc'))
+    import reactInVue1 from './reactInVue1'
+    const DatePickerInVue = applyReactInVue(DatePicker)
+    const CardInVue = applyReactInVue(Card)
     export default {
-        name: "reactInVue1",
         data () {
             return {
                 prop1Value: 111
             }
         },
-        mounted () {
-            console.log(this.$refs.reactCom.reactRef)
-        },
         components: {
-            ReactCom
+            DatePickerInVue,
+            CardInVue,
+            reactInVue1
         }
     }
 </script>

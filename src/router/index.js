@@ -38,6 +38,16 @@ const routes = [
         path: '/lazyReactInVue',
         name: 'lazyReactInVue',
         component: lazyReactInVue(() => import( '../react_app/cc.jsx'))
+    },
+    {
+        path: '/hackthonDemo1',
+        name: 'hackthonDemo1',
+        component: () => import( '../views/demo/hackthonDemo1')
+    },
+    {
+        path: '/abc',
+        name: 'abc',
+        component: () => import( '../views/demo/reactAntdInVue1')
     }
 ]
 

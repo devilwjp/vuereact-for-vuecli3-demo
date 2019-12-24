@@ -1,4 +1,5 @@
 import React from 'react'
+import { withVueRouter } from 'vuereact-combined'
 class cc extends React.Component {
     constructor (props) {
         super(props)
@@ -14,6 +15,7 @@ class cc extends React.Component {
     render () {
         return (
             <div>
+                <h1>{this.props.$vueRoute.query.a}</h1>
                 <div onClick={(e)=>{console.log(e)}}>我是React组件</div>
                 <div>属性1：{this.props.prop1}</div>
                 <div>属性2：{this.props.prop2}</div>
@@ -25,4 +27,4 @@ class cc extends React.Component {
         )
     }
 }
-export default cc
+export default withVueRouter(cc)
