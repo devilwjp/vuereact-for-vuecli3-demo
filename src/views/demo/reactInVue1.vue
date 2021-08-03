@@ -1,7 +1,10 @@
 <template>
     <div class="vue-com">
         我是Vue组件
-        <ReactCom ref="reactCom" class="react-com" :prop1="prop1Value" prop2="222">我是普通插槽</ReactCom>
+      <div class="react-com">
+        <ReactCom ref="reactCom" :prop1="prop1Value" prop2="222">我是普通插槽</ReactCom>
+      </div>
+
     </div>
 </template>
 

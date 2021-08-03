@@ -1,18 +1,20 @@
 <template>
     <div class="vue-com">
         我是Vue组件
-        <ReactCom class="react-com" :prop1="prop1Value" prop2="222" @event1="callEvent1">
-            我是普通插槽
-            <template v-slot:slotA>
-                我是插槽A
-            </template>
-            <template v-slot:slotB>
-                我是插槽B
-            </template>
-            <template v-slot:slotC="context">
-                我是作用域插槽：{{context.value}}
-            </template>
+      <div class="react-com">
+        <ReactCom :prop1="prop1Value" prop2="222" @event1="callEvent1">
+          我是普通插槽
+          <template v-slot:slotA>
+            我是插槽A
+          </template>
+          <template v-slot:slotB>
+            我是插槽B
+          </template>
+          <template v-slot:slotC="context">
+            我是作用域插槽：{{context.value}}
+          </template>
         </ReactCom>
+      </div>
     </div>
 </template>
 
